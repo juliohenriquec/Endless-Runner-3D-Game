@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://hxljpyuyjkmq"]
+
+[ext_resource type="PackedScene" uid="uid://dsd3maui6sbm2" path="res://addons/models/Coin_A.fbx" id="1_68xl6"]
+
+[node name="Coin_A" instance=ExtResource("1_68xl6")]

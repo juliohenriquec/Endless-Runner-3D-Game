@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://x41ida6ew4s8"]
+
+[ext_resource type="PackedScene" uid="uid://pmj7uke5xgdj" path="res://entities/player.tscn" id="1_2q6dc"]
+[ext_resource type="Script" uid="uid://cr2na7xceyl7x" path="res://scenes/level.gd" id="1_w8frs"]
+
+[sub_resource type="Environment" id="Environment_2q6dc"]
+background_mode = 1
+background_color = Color(0.83109623, 0.8710013, 0.9081354, 1)
+background_energy_multiplier = 2.2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 3.45
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_w7c3h"]
+
+[sub_resource type="Compositor" id="Compositor_w8frs"]
+
+[node name="Level" type="Node3D"]
+script = ExtResource("1_w8frs")
+
+[node name="Player" parent="." instance=ExtResource("1_2q6dc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.42332268, 0.94166964, 0.023258686)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.612852, 0.7901978, 0, -0.7901978, 0.612852, 0, 14.340941, 9.893162)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_2q6dc")
+camera_attributes = SubResource("CameraAttributesPractical_w7c3h")
+compositor = SubResource("Compositor_w8frs")
+
+[node name="Spawn_Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Spawn_Timer" to="." method="_on_spawn_timer_timeout"]
