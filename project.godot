@@ -14,7 +14,10 @@ config/name="Endless Runner"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
-[rendering]
+[autoload]
 
-renderer/rendering_method="gl_compatibility"
-renderer/rendering_method.mobile="gl_compatibility"
+Global="*res://systems/global.gd"
+
+[global_group]
+
+player=""

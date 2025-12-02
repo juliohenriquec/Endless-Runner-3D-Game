@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 
 const SPEED: float = 8.0
-const JUMP_VELOCITY:float = 8
+const JUMP_VELOCITY:float = 10
 const GRAVITY: float = 24.0
 const LANES: Array = [-2, 0, 2] #Posição das pistas de corrida index = 0,1,2
 

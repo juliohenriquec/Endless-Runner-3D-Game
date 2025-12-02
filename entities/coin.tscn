@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://hxljpyuyjkmq"]
+
+[ext_resource type="PackedScene" uid="uid://dsd3maui6sbm2" path="res://addons/models/Coin_A.fbx" id="1_cg25x"]
+[ext_resource type="Script" uid="uid://5bvd2bvypaoq" path="res://entities/coin.gd" id="2_a182a"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_a182a"]
+height = 0.4025879
+
+[node name="Coin" instance=ExtResource("1_cg25x")]
+script = ExtResource("2_a182a")
+
+[node name="Area3D" type="Area3D" parent="." index="0"]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, -0.049843434, -0.99875706, 0, 0.99875706, -0.049843434, 0, 6.6928566e-05, -0.0013411045)
+shape = SubResource("CylinderShape3D_a182a")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

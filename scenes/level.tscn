@@ -1,34 +1,49 @@
-[gd_scene load_steps=6 format=3 uid="uid://x41ida6ew4s8"]
+[gd_scene load_steps=10 format=3 uid="uid://x41ida6ew4s8"]
 
 [ext_resource type="PackedScene" uid="uid://pmj7uke5xgdj" path="res://entities/player.tscn" id="1_2q6dc"]
 [ext_resource type="Script" uid="uid://cr2na7xceyl7x" path="res://scenes/level.gd" id="1_w8frs"]
+[ext_resource type="PackedScene" uid="uid://uqxeai4o5tnh" path="res://scenes/ground.tscn" id="3_w8frs"]
+[ext_resource type="PackedScene" uid="uid://hxljpyuyjkmq" path="res://entities/coin.tscn" id="4_mx8sn"]
+[ext_resource type="PackedScene" uid="uid://oousw4bquo48" path="res://entities/obstacle.tscn" id="5_ppgk2"]
+[ext_resource type="PackedScene" uid="uid://c8mgeya2pq0cp" path="res://systems/spawner.tscn" id="6_2r41h"]
 
-[sub_resource type="Environment" id="Environment_2q6dc"]
-background_mode = 1
-background_color = Color(0.83109623, 0.8710013, 0.9081354, 1)
-background_energy_multiplier = 2.2
-ambient_light_color = Color(1, 1, 1, 1)
-ambient_light_energy = 3.45
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w7c3h"]
+sky_top_color = Color(0.20953038, 0.45019114, 0.86622185, 1)
+sky_horizon_color = Color(0.82449347, 0.97152865, 1.1293368, 1)
+ground_bottom_color = Color(0.16031796, 0.5077981, 0.7230001, 1)
+ground_horizon_color = Color(0.82449347, 0.97152865, 1.1293368, 1)
 
-[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_w7c3h"]
+[sub_resource type="Sky" id="Sky_w8frs"]
+sky_material = SubResource("ProceduralSkyMaterial_w7c3h")
 
-[sub_resource type="Compositor" id="Compositor_w8frs"]
+[sub_resource type="Environment" id="Environment_mx8sn"]
+background_mode = 2
+sky = SubResource("Sky_w8frs")
+tonemap_mode = 2
 
 [node name="Level" type="Node3D"]
 script = ExtResource("1_w8frs")
 
-[node name="Player" parent="." instance=ExtResource("1_2q6dc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.42332268, 0.94166964, 0.023258686)
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_mx8sn")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.612852, 0.7901978, 0, -0.7901978, 0.612852, 0, 14.340941, 9.893162)
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_2q6dc")
-camera_attributes = SubResource("CameraAttributesPractical_w7c3h")
-compositor = SubResource("Compositor_w8frs")
+[node name="Player" parent="." instance=ExtResource("1_2q6dc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0014852, 0)
+collision_mask = 134
 
-[node name="Spawn_Timer" type="Timer" parent="."]
-autostart = true
+[node name="Ground" parent="." instance=ExtResource("3_w8frs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -97.0683)
+collision_layer = 128
+collision_mask = 0
 
-[connection signal="timeout" from="Spawn_Timer" to="." method="_on_spawn_timer_timeout"]
+[node name="Coin" parent="." instance=ExtResource("4_mx8sn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5521917, 0.706933, -69.815094)
+
+[node name="obstacle" parent="." instance=ExtResource("5_ppgk2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7377973, 0.45299864, -53.679604)
+
+[node name="Spawner" parent="." instance=ExtResource("6_2r41h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.43777466, -102.72957)

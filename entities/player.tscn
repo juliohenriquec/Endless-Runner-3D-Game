@@ -10,7 +10,8 @@ material = SubResource("StandardMaterial3D_merdl")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_merdl"]
 
-[node name="Player" type="CharacterBody3D"]
+[node name="Player" type="CharacterBody3D" groups=["player"]]
+collision_mask = 6
 script = ExtResource("1_merdl")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]

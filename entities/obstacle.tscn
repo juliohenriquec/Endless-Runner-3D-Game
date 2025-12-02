@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://oousw4bquo48"]
+
+[ext_resource type="Script" uid="uid://c7us6dhlubljk" path="res://entities/obstacle.gd" id="1_yqsfx"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_qcbvg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sl1jc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yqsfx"]
+size = Vector3(1, 1, 0.104400635)
+
+[node name="obstacle" type="Node3D"]
+script = ExtResource("1_yqsfx")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+collision_layer = 4
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+mesh = SubResource("BoxMesh_qcbvg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+shape = SubResource("BoxShape3D_sl1jc")
+
+[node name="Area3D" type="Area3D" parent="RigidBody3D"]
+collision_layer = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.45085144)
+shape = SubResource("BoxShape3D_yqsfx")
+
+[connection signal="body_entered" from="RigidBody3D/Area3D" to="." method="_on_area_3d_body_entered"]

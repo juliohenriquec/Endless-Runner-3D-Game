@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://uqxeai4o5tnh"]
+
+[ext_resource type="Texture2D" uid="uid://461s5lhv2nn" path="res://addons/textures/pista_texture.png" id="1_mi8v4"]
+[ext_resource type="Script" uid="uid://hymxhoqqhpcj" path="res://scenes/mesh_instance_3d.gd" id="2_lmksl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mx8sn"]
+albedo_texture = ExtResource("1_mi8v4")
+uv1_scale = Vector3(1, 20, 20)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ppgk2"]
+lightmap_size_hint = Vector2i(1034, 1016)
+material = SubResource("StandardMaterial3D_mx8sn")
+size = Vector3(6, 1, 200)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_w7c3h"]
+size = Vector3(6, 1, 200)
+
+[node name="Ground" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.57197094, 0)
+mesh = SubResource("BoxMesh_ppgk2")
+script = ExtResource("2_lmksl")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.572, 0)
+shape = SubResource("BoxShape3D_w7c3h")
