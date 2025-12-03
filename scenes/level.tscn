@@ -1,10 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://x41ida6ew4s8"]
+[gd_scene load_steps=8 format=3 uid="uid://x41ida6ew4s8"]
 
 [ext_resource type="PackedScene" uid="uid://pmj7uke5xgdj" path="res://entities/player.tscn" id="1_2q6dc"]
 [ext_resource type="Script" uid="uid://cr2na7xceyl7x" path="res://scenes/level.gd" id="1_w8frs"]
 [ext_resource type="PackedScene" uid="uid://uqxeai4o5tnh" path="res://scenes/ground.tscn" id="3_w8frs"]
-[ext_resource type="PackedScene" uid="uid://hxljpyuyjkmq" path="res://entities/coin.tscn" id="4_mx8sn"]
-[ext_resource type="PackedScene" uid="uid://oousw4bquo48" path="res://entities/obstacle.tscn" id="5_ppgk2"]
 [ext_resource type="PackedScene" uid="uid://c8mgeya2pq0cp" path="res://systems/spawner.tscn" id="6_2r41h"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w7c3h"]
@@ -39,11 +37,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -97.0683)
 collision_layer = 128
 collision_mask = 0
 
-[node name="Coin" parent="." instance=ExtResource("4_mx8sn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5521917, 0.706933, -69.815094)
-
-[node name="obstacle" parent="." instance=ExtResource("5_ppgk2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7377973, 0.45299864, -53.679604)
-
 [node name="Spawner" parent="." instance=ExtResource("6_2r41h")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.43777466, -102.72957)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.43777466, -154.28333)
