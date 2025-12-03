@@ -6,15 +6,16 @@ const JUMP_VELOCITY:float = 10
 const GRAVITY: float = 24.0
 const LANES: Array = [-2, 0, 2] #Posição das pistas de corrida index = 0,1,2
 
+#Inicia na posição 1 do array lanes (x = 0)
 var starting_point: Vector3 = Vector3.ZERO
-var current_lane: int = 1 #Inicia na posição 1 do array lanes (x = 0)
+var current_lane: int = 1
 var target_lane: int = 1
 
 var is_jumping: bool = false
 var is_dead: bool = false
 
 func _ready() -> void:
-	starting_point =global_transform.origin
+	starting_point =global_transform.origin #coloca o jogador no ponto inicial
 
 func _physics_process(delta: float) -> void:
 	var direction: Vector3 = Vector3.ZERO

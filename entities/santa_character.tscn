@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://inmynrn5u3k2"]
+
+[ext_resource type="PackedScene" uid="uid://b3ohhph6c3y16" path="res://addons/models/SantaCharacter.fbx" id="1_g6u4s"]
+
+[node name="SantaCharacter" instance=ExtResource("1_g6u4s")]
