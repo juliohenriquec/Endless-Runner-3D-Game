@@ -1,0 +1,75 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5h2paa57p3rs"]
+
+[ext_resource type="FontFile" uid="uid://bs2226uf6fghq" path="res://addons/Fonts/Knewave-Regular.ttf" id="1_hp216"]
+[ext_resource type="Script" uid="uid://cy86dnff4gg3i" path="res://shared/menu_title.gd" id="1_l3g5w"]
+
+[node name="MenuTitle" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l3g5w")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1155.0
+offset_bottom = 650.0
+color = Color(0, 0.7524084, 0.7546944, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -57.0
+offset_top = 160.0
+offset_right = 57.0
+offset_bottom = 183.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9019503, 0.4824363, 0.11638241, 1)
+theme_override_colors/font_shadow_color = Color(0.7137255, 0.6431373, 0.54509807, 0.45882353)
+theme_override_colors/font_outline_color = Color(0.6264158, 0.32776475, 0.14830804, 1)
+theme_override_constants/outline_size = 13
+theme_override_constants/shadow_outline_size = 8
+theme_override_fonts/font = ExtResource("1_hp216")
+theme_override_font_sizes/font_size = 64
+text = "Run, Santa's Elf!"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = 49.0
+offset_right = 4.0
+offset_bottom = 57.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_hp216")
+theme_override_font_sizes/font_size = 32
+text = "PLAY GAME"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = 116.0
+offset_right = 83.0
+offset_bottom = 175.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_hp216")
+theme_override_font_sizes/font_size = 32
+text = "EXIT"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

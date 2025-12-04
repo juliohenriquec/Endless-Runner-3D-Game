@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bw3amd2i5x5qk"
+path="res://.godot/imported/cabin-overhang-door-rotate.obj-ed536f0062e60a0f8d7ea272f9dfa822.mesh"
+
+[deps]
+
+files=["res://.godot/imported/cabin-overhang-door-rotate.obj-ed536f0062e60a0f8d7ea272f9dfa822.mesh"]
+
+source_file="res://addons/set/Models/OBJ format/cabin-overhang-door-rotate.obj"
+dest_files=["res://.godot/imported/cabin-overhang-door-rotate.obj-ed536f0062e60a0f8d7ea272f9dfa822.mesh", "res://.godot/imported/cabin-overhang-door-rotate.obj-ed536f0062e60a0f8d7ea272f9dfa822.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

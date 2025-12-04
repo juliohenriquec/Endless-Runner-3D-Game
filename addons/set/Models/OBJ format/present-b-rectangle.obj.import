@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cxye5t5oriuyj"
+path="res://.godot/imported/present-b-rectangle.obj-52c5e59b53839f3789f77ccd0e030cba.mesh"
+
+[deps]
+
+files=["res://.godot/imported/present-b-rectangle.obj-52c5e59b53839f3789f77ccd0e030cba.mesh"]
+
+source_file="res://addons/set/Models/OBJ format/present-b-rectangle.obj"
+dest_files=["res://.godot/imported/present-b-rectangle.obj-52c5e59b53839f3789f77ccd0e030cba.mesh", "res://.godot/imported/present-b-rectangle.obj-52c5e59b53839f3789f77ccd0e030cba.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

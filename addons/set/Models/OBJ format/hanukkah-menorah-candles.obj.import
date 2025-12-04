@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cp02kx5q84wql"
+path="res://.godot/imported/hanukkah-menorah-candles.obj-91aa83f20943db0c906878ef6b3ed463.mesh"
+
+[deps]
+
+files=["res://.godot/imported/hanukkah-menorah-candles.obj-91aa83f20943db0c906878ef6b3ed463.mesh"]
+
+source_file="res://addons/set/Models/OBJ format/hanukkah-menorah-candles.obj"
+dest_files=["res://.godot/imported/hanukkah-menorah-candles.obj-91aa83f20943db0c906878ef6b3ed463.mesh", "res://.godot/imported/hanukkah-menorah-candles.obj-91aa83f20943db0c906878ef6b3ed463.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

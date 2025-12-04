@@ -1,0 +1,60 @@
+[gd_scene load_steps=3 format=3 uid="uid://ch2wy11tddxlk"]
+
+[ext_resource type="Script" uid="uid://b4qdjqagaf07h" path="res://shared/game_over.gd" id="1_ui47h"]
+[ext_resource type="FontFile" uid="uid://bs2226uf6fghq" path="res://addons/Fonts/Knewave-Regular.ttf" id="1_xxfpp"]
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ui47h")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 647.0
+color = Color(0.675712, 0.2726377, 0.22844926, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.60593516, 0.87561625, 0.8760067, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.48158616, 0.49517316, 1)
+theme_override_colors/font_outline_color = Color(0.25891528, 0.74860173, 0.98429555, 1)
+theme_override_constants/shadow_offset_x = 7
+theme_override_constants/shadow_offset_y = 7
+theme_override_fonts/font = ExtResource("1_xxfpp")
+theme_override_font_sizes/font_size = 64
+text = "GAME OVER"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = 111.0
+offset_right = 4.0
+offset_bottom = 119.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_xxfpp")
+theme_override_font_sizes/font_size = 32
+text = "RESTART"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

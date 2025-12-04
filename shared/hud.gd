@@ -10,4 +10,4 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	$CoinsHud/CoinLabel.text = str(Global.coins)
 	$DistanceHud/DistanceLabel.text = "%d m" % Global.distance
-	pass
+	

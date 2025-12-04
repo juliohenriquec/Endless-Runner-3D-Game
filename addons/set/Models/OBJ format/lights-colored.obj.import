@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c3bqn2fqabxkp"
+path="res://.godot/imported/lights-colored.obj-cc0430d96c9129760089b6994583e57d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/lights-colored.obj-cc0430d96c9129760089b6994583e57d.mesh"]
+
+source_file="res://addons/set/Models/OBJ format/lights-colored.obj"
+dest_files=["res://.godot/imported/lights-colored.obj-cc0430d96c9129760089b6994583e57d.mesh", "res://.godot/imported/lights-colored.obj-cc0430d96c9129760089b6994583e57d.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
