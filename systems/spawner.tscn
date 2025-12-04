@@ -1,12 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://c8mgeya2pq0cp"]
+[gd_scene load_steps=2 format=3 uid="uid://c8mgeya2pq0cp"]
 
-[ext_resource type="PackedScene" uid="uid://oousw4bquo48" path="res://entities/obstacle.tscn" id="1_im8li"]
 [ext_resource type="Script" uid="uid://dxskx6dhfqwx7" path="res://systems/spawner.gd" id="1_vwlbe"]
-[ext_resource type="PackedScene" uid="uid://hxljpyuyjkmq" path="res://entities/coin.tscn" id="2_vwlbe"]
 
 [node name="Spawner" type="Node3D"]
 script = ExtResource("1_vwlbe")
-
-[node name="obstacle" parent="." instance=ExtResource("1_im8li")]
-
-[node name="Coin" parent="." instance=ExtResource("2_vwlbe")]

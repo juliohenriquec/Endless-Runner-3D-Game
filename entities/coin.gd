@@ -15,6 +15,6 @@ func _process(delta: float) -> void:
 
 
 #Sistema de colisão com o player
-func _on_area_3d_body_entered(body: Node3D) -> void:
+func _on_area_3d_body_entered(_body: Node3D) -> void:
 	Global.coins += 1
 	queue_free()

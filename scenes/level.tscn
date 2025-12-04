@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://x41ida6ew4s8"]
+[gd_scene load_steps=9 format=3 uid="uid://x41ida6ew4s8"]
 
 [ext_resource type="PackedScene" uid="uid://pmj7uke5xgdj" path="res://entities/player.tscn" id="1_2q6dc"]
 [ext_resource type="Script" uid="uid://cr2na7xceyl7x" path="res://scenes/level.gd" id="1_w8frs"]
+[ext_resource type="PackedScene" uid="uid://bq34nxhvvr22f" path="res://shared/hud.tscn" id="2_ppgk2"]
 [ext_resource type="PackedScene" uid="uid://uqxeai4o5tnh" path="res://scenes/ground.tscn" id="3_w8frs"]
 [ext_resource type="PackedScene" uid="uid://c8mgeya2pq0cp" path="res://systems/spawner.tscn" id="6_2r41h"]
 
@@ -22,6 +23,8 @@ tonemap_mode = 2
 [node name="Level" type="Node3D"]
 script = ExtResource("1_w8frs")
 
+[node name="HUD" parent="." instance=ExtResource("2_ppgk2")]
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_mx8sn")
 
@@ -34,8 +37,6 @@ collision_mask = 134
 
 [node name="Ground" parent="." instance=ExtResource("3_w8frs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -97.0683)
-collision_layer = 128
-collision_mask = 0
 
 [node name="Spawner" parent="." instance=ExtResource("6_2r41h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.43777466, -154.28333)

@@ -12,6 +12,7 @@ var timer := 0.0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	Global.distance += Global.global_speed * delta
 	timer -= delta
 	if timer <= 0:
 		spawn_random_object()
@@ -31,6 +32,7 @@ func spawn_random_object():
 		
 	instance.position.x = lane
 	instance.position.z = spawn_z_position
+	instance.position.y = 0.3
 	
 	add_child(instance)
 	
