@@ -1,14 +1,16 @@
-[gd_scene load_steps=9 format=3 uid="uid://x41ida6ew4s8"]
+[gd_scene load_steps=13 format=3 uid="uid://x41ida6ew4s8"]
 
 [ext_resource type="PackedScene" uid="uid://pmj7uke5xgdj" path="res://entities/player.tscn" id="1_2q6dc"]
 [ext_resource type="Script" uid="uid://cr2na7xceyl7x" path="res://scenes/level.gd" id="1_w8frs"]
 [ext_resource type="PackedScene" uid="uid://bq34nxhvvr22f" path="res://shared/hud.tscn" id="2_ppgk2"]
 [ext_resource type="PackedScene" uid="uid://uqxeai4o5tnh" path="res://scenes/ground.tscn" id="3_w8frs"]
 [ext_resource type="PackedScene" uid="uid://c8mgeya2pq0cp" path="res://systems/spawner.tscn" id="6_2r41h"]
+[ext_resource type="PackedScene" uid="uid://b1kjsumoi3qw8" path="res://scenes/scenario_segment.tscn" id="6_klq6b"]
+[ext_resource type="Script" uid="uid://b2la4xyrwa3x2" path="res://scenes/scenario_segment.gd" id="7_b121j"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w7c3h"]
 sky_top_color = Color(0.20953038, 0.45019114, 0.86622185, 1)
-sky_horizon_color = Color(0.82449347, 0.97152865, 1.1293368, 1)
+sky_horizon_color = Color(0.824, 0.972, 1.129, 1)
 ground_bottom_color = Color(0.16031796, 0.5077981, 0.7230001, 1)
 ground_horizon_color = Color(0.82449347, 0.97152865, 1.1293368, 1)
 
@@ -19,6 +21,16 @@ sky_material = SubResource("ProceduralSkyMaterial_w7c3h")
 background_mode = 2
 sky = SubResource("Sky_w8frs")
 tonemap_mode = 2
+fog_light_color = Color(1.1288555, 1.1288555, 1.1288555, 1)
+fog_light_energy = 0.1
+fog_depth_begin = 20.0
+fog_depth_end = 150.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_klq6b"]
+albedo_color = Color(0.824, 0.972, 1.129, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_b121j"]
+material = SubResource("StandardMaterial3D_klq6b")
 
 [node name="Level" type="Node3D"]
 script = ExtResource("1_w8frs")
@@ -39,4 +51,30 @@ collision_mask = 134
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -97.0683)
 
 [node name="Spawner" parent="." instance=ExtResource("6_2r41h")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.43777466, -154.28333)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.59389806, -192.14615)
+
+[node name="ScenarioSpawner" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4516, 0, -18.160778)
+
+[node name="ScenarioSegment1" parent="ScenarioSpawner" instance=ExtResource("6_klq6b")]
+script = ExtResource("7_b121j")
+
+[node name="ScenarioSegment2" parent="ScenarioSpawner" instance=ExtResource("6_klq6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -40.238613)
+script = ExtResource("7_b121j")
+
+[node name="ScenarioSegment3" parent="ScenarioSpawner" instance=ExtResource("6_klq6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -80.85315)
+script = ExtResource("7_b121j")
+
+[node name="ScenarioSegment4" parent="ScenarioSpawner" instance=ExtResource("6_klq6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -121.45537)
+script = ExtResource("7_b121j")
+
+[node name="ScenarioSegment5" parent="ScenarioSpawner" instance=ExtResource("6_klq6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -161.4672)
+script = ExtResource("7_b121j")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(20, 0, 0, 0, -8.742278e-07, -8, 0, 20, -3.496911e-07, 0, 4.467107, -185.24384)
+mesh = SubResource("PlaneMesh_b121j")

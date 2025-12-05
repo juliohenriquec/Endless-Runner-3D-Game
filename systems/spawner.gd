@@ -32,7 +32,6 @@ func spawn_random_object():
 		
 	instance.position.x = lane
 	instance.position.z = spawn_z_position
-	instance.position.y = 0.3
 	
 	add_child(instance)
 	
