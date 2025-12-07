@@ -21,3 +21,8 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		
 		await get_tree().create_timer(0.5).timeout
 		get_tree().change_scene_to_file("res://shared/game_over.tscn")
+
+
+func _on_visible_on_screen_notifier_3d_screen_exited() -> void:
+	queue_free()
+	print('morri')

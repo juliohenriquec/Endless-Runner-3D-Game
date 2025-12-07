@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://uklnwypbnkav"]
+
+[ext_resource type="PackedScene" uid="uid://ddpgy7ylaotgl" path="res://addons/models/player/Personagem.fbx" id="1_6oygd"]
+
+[node name="Personagem" instance=ExtResource("1_6oygd")]
+
+[node name="Skeleton3D" parent="." index="0"]
+bones/0/position = Vector3(1.8626451e-07, 0.7693059, 0.01889541)
+bones/7/rotation = Quaternion(-0.49442336, -0.4835576, 0.563652, -0.45167923)
+bones/8/rotation = Quaternion(-0.06625337, 0.12019033, 0.04402788, 0.98955864)
+bones/9/rotation = Quaternion(-3.5553157e-07, 0.002464297, -2.2439053e-07, 0.999997)
+bones/10/rotation = Quaternion(-4.3654646e-07, 0.0007216297, 3.0734554e-08, 0.99999976)
+bones/11/rotation = Quaternion(8.961336e-08, 0.78010046, -1.4901161e-08, 0.62565434)
+bones/12/rotation = Quaternion(-0.05342258, -6.9005374e-08, 0.115602635, 0.9918579)
+bones/13/rotation = Quaternion(0.16317143, -0.034399357, -0.03902192, 0.9852255)
+bones/15/rotation = Quaternion(0.54188424, -0.45192015, 0.5336926, 0.46615642)
+bones/16/rotation = Quaternion(-0.07398003, -0.23499103, 0.029239286, 0.96873695)
+bones/17/rotation = Quaternion(-4.266041e-07, -0.0033980855, 1.5832485e-07, 0.9999943)
+bones/18/rotation = Quaternion(-2.598404e-07, 0.6491222, 1.4901161e-07, 0.7606842)
+bones/19/rotation = Quaternion(-6.660449e-08, 0.9923042, -1.1920929e-07, 0.123823725)
+bones/20/rotation = Quaternion(0.23093405, 1.4026791e-09, 0.036709014, 0.9722767)
+bones/21/rotation = Quaternion(-0.0888075, 0.015426673, 0.016479496, 0.995793)
+bones/23/rotation = Quaternion(-0.00011589826, -0.009469069, 0.9998265, -0.01604214)
+bones/24/rotation = Quaternion(-0.021206615, 0.00048741803, -0.038252197, 0.999043)
+bones/25/rotation = Quaternion(0.39271897, 0.015524592, -0.0076460834, 0.9194957)
+bones/28/rotation = Quaternion(0.00010735335, -0.008700715, 0.9998335, 0.016044956)
+bones/29/rotation = Quaternion(-0.02386461, -0.0006326015, 0.03825123, 0.998983)
+bones/30/rotation = Quaternion(0.39133963, -0.015549295, 0.007675151, 0.92008287)
