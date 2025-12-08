@@ -18,3 +18,8 @@ func _process(delta: float) -> void:
 func _on_area_3d_body_entered(_body: Node3D) -> void:
 	Global.coins += 1
 	queue_free()
+
+
+func _on_visible_on_screen_notifier_3d_screen_exited() -> void:
+	queue_free()
+	

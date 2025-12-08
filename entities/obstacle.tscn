@@ -1,31 +1,32 @@
 [gd_scene load_steps=5 format=3 uid="uid://oousw4bquo48"]
 
 [ext_resource type="Script" uid="uid://c7us6dhlubljk" path="res://entities/obstacle.gd" id="1_yqsfx"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_qcbvg"]
+[ext_resource type="ArrayMesh" uid="uid://cvh7ii12tl40p" path="res://addons/set/Models/malhas/rocks-small_rocks-small.res" id="2_70f0i"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_sl1jc"]
-size = Vector3(1.0126648, 1.0227051, 1)
+size = Vector3(1.0126648, 0.7407837, 1.0161133)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yqsfx"]
-size = Vector3(1, 1, 0.104400635)
+size = Vector3(1, 0.7471924, 0.104400635)
 
 [node name="obstacle" type="Node3D"]
 script = ExtResource("1_yqsfx")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("BoxMesh_qcbvg")
+[node name="RocksSmallRocksSmall" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03153813, 0, 0.030916274)
+mesh = ExtResource("2_70f0i")
 skeleton = NodePath("")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0023651123, -0.006713867, 0)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RocksSmallRocksSmall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03390324, 0.31826782, -0.022859633)
 shape = SubResource("BoxShape3D_sl1jc")
 
 [node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.14060444)
 collision_layer = 4
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.45085144)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.32102084, 0.45085144)
 shape = SubResource("BoxShape3D_yqsfx")
 
 [node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="."]

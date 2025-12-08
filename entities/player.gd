@@ -18,6 +18,14 @@ func _ready() -> void:
 	starting_point =global_transform.origin #coloca o jogador no ponto inicial
 
 func _physics_process(delta: float) -> void:
+	if is_dead:
+		velocity = Vector3.ZERO
+		translate(Vector3(0, 0, 0.01))
+		return 
+
+	if is_on_floor() and Global.global_speed != 0:
+		$AnimationPlayer.play("animations/run", 0.15)
+		
 	var direction: Vector3 = Vector3.ZERO
 	
 	#Trocando de pista
@@ -36,9 +44,11 @@ func _physics_process(delta: float) -> void:
 		velocity.y -= GRAVITY * delta
 	else:
 		velocity.y = 0 
-	
+		
+		
 	#pulo
 	if is_on_floor() and Input.is_action_pressed("ui_accept"):
 		velocity.y = JUMP_VELOCITY
-	
+		$AnimationPlayer.play("animations/jump", 0.15)
+
 	move_and_slide()

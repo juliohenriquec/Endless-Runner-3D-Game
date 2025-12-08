@@ -44,7 +44,7 @@ environment = SubResource("Environment_mx8sn")
 transform = Transform3D(1, 0, 0, 0, 0.612852, 0.7901978, 0, -0.7901978, 0.612852, 0, 14.340941, 9.893162)
 
 [node name="Player" parent="." instance=ExtResource("1_2q6dc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0014852, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1235381, -1.4703181)
 collision_mask = 134
 
 [node name="Ground" parent="." instance=ExtResource("3_w8frs")]
