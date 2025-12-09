@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bq34nxhvvr22f"]
 
-[ext_resource type="Texture2D" uid="uid://yt1qdxjvdi46" path="res://addons/images/hud_coin.png" id="1_qha2f"]
 [ext_resource type="Script" uid="uid://cng6dryqmenbh" path="res://shared/hud.gd" id="1_xl8re"]
+[ext_resource type="Texture2D" uid="uid://ci2fcqprub2fs" path="res://addons/textures/giftcoin.png" id="2_s8k37"]
 [ext_resource type="FontFile" uid="uid://dqj6jjds3iasf" path="res://addons/Fonts/KiriFont.ttf" id="2_xl8re"]
 [ext_resource type="FontFile" uid="uid://bs2226uf6fghq" path="res://addons/Fonts/Knewave-Regular.ttf" id="3_s8k37"]
 
@@ -23,12 +23,12 @@ offset_bottom = 65.0
 
 [node name="TextureRect" type="TextureRect" parent="CoinsHud"]
 layout_mode = 0
-offset_left = 28.0
-offset_top = 24.0
-offset_right = 228.0
-offset_bottom = 224.0
-scale = Vector2(0.19785836, 0.19945726)
-texture = ExtResource("1_qha2f")
+offset_left = 32.0
+offset_top = 29.0
+offset_right = 222.0
+offset_bottom = 219.0
+scale = Vector2(0.16, 0.16)
+texture = ExtResource("2_s8k37")
 
 [node name="Label" type="Label" parent="CoinsHud"]
 layout_mode = 0

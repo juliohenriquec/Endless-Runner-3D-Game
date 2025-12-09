@@ -25,6 +25,7 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		
 		
 		await get_tree().create_timer(1.5).timeout
+		SoundManeger.stop_level_music()
 		get_tree().change_scene_to_file("res://shared/game_over.tscn")
 
 
