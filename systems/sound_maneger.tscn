@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bm8bs57jlb7lv"]
 
-[ext_resource type="Script" uid="uid://60ekayx8jsyd" path="res://sound_maneger.gd" id="1_ciyh0"]
+[ext_resource type="Script" uid="uid://60ekayx8jsyd" path="res://systems/sound_maneger.gd" id="1_ciyh0"]
 [ext_resource type="AudioStream" uid="uid://c4qt6hc6pm4aj" path="res://addons/music/Its_Snowtime_MP3.mp3" id="2_loy5y"]
 [ext_resource type="AudioStream" uid="uid://b74q2qm4lrf0q" path="res://addons/music/POL-winter-challenge-short.ogg" id="3_loy5y"]
 

@@ -3,7 +3,7 @@ extends CharacterBody3D
 
 const SPEED: float = 8.0
 const JUMP_VELOCITY:float = 10
-const GRAVITY: float = 24.0
+const GRAVITY: float = 27.0
 const LANES: Array = [-2, 0, 2] #Posição das pistas de corrida index = 0,1,2
 
 #Inicia na posição 1 do array lanes (x = 0)
@@ -26,7 +26,6 @@ func _physics_process(delta: float) -> void:
 	if is_on_floor() and Global.global_speed != 0:
 		$AnimationPlayer.play("animations/run", 0.15)
 		
-	var direction: Vector3 = Vector3.ZERO
 	
 	#Trocando de pista
 	if Input.is_action_just_pressed("ui_left") and target_lane > 0:

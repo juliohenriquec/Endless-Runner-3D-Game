@@ -71,3 +71,4 @@ offset_right = 147.0
 offset_bottom = 71.0
 theme_override_fonts/font = ExtResource("3_s8k37")
 theme_override_font_sizes/font_size = 32
+text = "0"
