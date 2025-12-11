@@ -1,6 +1,6 @@
 extends Node3D
 
-@export var length := 40.0  # comprimento do segmento
+@export var length : float = 40.0  # comprimento do segmento
 
 func _process(delta):
 	position.z += Global.global_speed * delta

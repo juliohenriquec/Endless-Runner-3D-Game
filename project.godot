@@ -13,7 +13,7 @@ config_version=5
 config/name="Endless Runner"
 run/main_scene="uid://b5h2paa57p3rs"
 config/features=PackedStringArray("4.5", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="uid://ci2fcqprub2fs"
 
 [autoload]
 

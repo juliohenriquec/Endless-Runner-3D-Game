@@ -7,7 +7,7 @@ extends Node3D
 
 const LANES := [-2.0, 0.0, 2.0]
 
-var max_side_by_side := 3
+var max_side_by_side : int = 3
 var min_spawn_interval : float = 0.4
 var spawn_difficulty_factor : float = 0.97
 var obstacle_chance := 0.6
@@ -70,7 +70,3 @@ func increase_difficulty():
 	# aumentar chance de obstáculo
 	obstacle_chance = min(obstacle_chance + 0.03, 1.0 - min_coin_chance)
 	
-	#DEBUG
-	print("Nova velocidade:", Global.global_speed)
-	print("Novo spawn interval:", spawn_interval)
-	print("Chance obstáculo:", obstacle_chance)

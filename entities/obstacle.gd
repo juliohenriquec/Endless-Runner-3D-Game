@@ -1,8 +1,6 @@
 extends Node3D
 
-func _ready():
-	pass
-	
+
 func _process(delta: float) -> void:
 	#Faz o obstaculo se mover em direção ao jogador
 	var speed : float = Global.global_speed
@@ -16,9 +14,10 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		Global.global_speed = 0.0
 		
 		body.is_dead = true
+		#animação de cair para trás
 		body.get_node("AnimationPlayer").play("animations/fall")
 		
-		#verificando o record
+		#verificando o recorde
 		if Global.distance > Global.best_distance:
 			Global.best_distance = Global.distance
 			Global.save_best_distance()

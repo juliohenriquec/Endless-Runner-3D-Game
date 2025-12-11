@@ -1,6 +1,6 @@
 extends Node3D
 
-const ROT_SPEED := 2.0
+const ROT_SPEED : float = 2.0
 @export var hud : CanvasLayer
 @export var ground : Node3D 
 
@@ -19,7 +19,7 @@ func _on_area_3d_body_entered(_body: Node3D) -> void:
 	Global.coins += 1
 	queue_free()
 
-
+#Despawn de moedas
 func _on_visible_on_screen_notifier_3d_screen_exited() -> void:
 	queue_free()
 	
