@@ -33,9 +33,7 @@ In this festive North Pole adventure, you play as Santa’s elf, racing through 
 
 ## 🚀 How to Play
 
-1. Download or clone the repository  
-2. Open the project in Godot  
-3. Run the main scene  
+1. 👉 Play here: https://lujihc.itch.io/
 
 ---
 
