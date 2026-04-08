@@ -1,14 +1,60 @@
-**Run, Santa’s Elf!** is an Endless Runner game developed for the Game Jam Godot BR Christmas edition 2025.
-The game was created entirely by me, using some pre-made assets (see the Credits section). It follows a North Pole City theme, and you control an elf whose mission is to recover the Christmas presents that fell from Santa Claus’s sleigh and are now scattered along the city’s main avenue.
+# 🎄 Run, Santa’s Elf!
 
-**Controls**
+**Run, Santa’s Elf!** is a 3D Endless Runner developed for the **Godot BR Christmas Game Jam 2025**.
 
-* Left Arrow: Move to the left lane.
-* Right Arrow: Move to the right lane.
-* Space: Jump.
+In this festive North Pole adventure, you play as Santa’s elf, racing through the city to recover presents that fell from Santa’s sleigh.
 
-**Credits**
+---
 
-* City 3D Models: Kenney
-* Elf Model: Ford Cruller
-* Music: Fablefly Music and PlayOnLoop.com
+## 🎮 Gameplay
+
+- 🏃 Endless runner with lane-based movement  
+- 🎁 Collect scattered Christmas presents  
+- ❄️ Festive North Pole city environment  
+
+---
+
+## 🕹️ Controls
+
+| Action        | Key          |
+|--------------|-------------|
+| Move Left     | ← Arrow     |
+| Move Right    | → Arrow     |
+| Jump          | Space       |
+
+---
+
+## 🛠️ Built With
+
+- Godot Engine  
+- GDScript  
+
+---
+
+## 🚀 How to Play
+
+1. Download or clone the repository  
+2. Open the project in Godot  
+3. Run the main scene  
+
+---
+
+## 🧠 What I Learned
+
+- Player movement and lane systems  
+- Basic game physics and collisions  
+- Structuring a complete game under time constraints (Game Jam)  
+
+---
+
+## 👤 Author
+
+Developed entirely by me during the Game Jam.
+
+---
+
+## 🎨 Credits
+
+- **City 3D Models**: Kenney  
+- **Elf Model**: Ford Cruller  
+- **Music**: Fablefly Music, PlayOnLoop.com  
